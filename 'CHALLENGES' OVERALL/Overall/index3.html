@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box ;
+        }
+
+        header h1{
+            text-align: center;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        header{
+            background-color: rgba(245, 7, 54, 0.205);
+        }
+
+        .questions{
+            padding: 20px;
+        }
+
+        .q1{
+            padding: 40px;
+            margin-left: 15%;
+        }
+
+        .q2{
+            padding: 40px;
+            margin-left: 40em;
+            margin-top: -5em;
+        }
+
+        .q3{
+            padding: 40px;
+            margin-left: 15%;
+        }
+
+        .q4{
+            padding: 40px;
+            margin-left: 40em;
+            margin-top: -5em;
+        }
+
+        .q5{
+            padding: 40px;
+            margin-left: 35%;
+        }
+        .q6{
+            padding: 40px;
+            margin-left: 35%;
+        }
+
+        .words{
+            color: rgba(173, 13, 13, 0.897);
+            margin-top: -40px;
+        }
+
+        select{
+            padding: 5px;
+        }
+
+        .q7{
+            margin-left: 45em;
+            margin-top: -8em;
+        }
+
+
+        input[type="submit"]{
+            padding: 15px;
+            font-size: 25px;
+            outline: none;
+            border: none;
+            background: linear-gradient(red,yellow,cyan );
+            border-radius:30px;
+            cursor: pointer;
+            margin-top: 5em;
+            margin-left: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <h1>Styled Survey</h1>
+        </header>
+        <form>
+            <div class="questions">
+                <div class="q1"> <input type="text"> <p class="words">First Name?</p></div>
+                <div class="q2"><input type="text"> <p class="words">Last Name?</p></div>
+                <div class="q3"><input type="text"> <p class="words">Age?</p></div>
+                <div class="q4"><input type="text"> <p class="words">Date of Birth?</p></div>
+                <div class="q5"><input type="radio" >&nbsp; Yes <p class="words">Have you ever owned a pet?</p></div>
+                <div class="q6"><input type="radio"> No</div>
+
+                <div class="q7">
+                    <p class="words">Animal is it?</p>
+                    <select id="pet" >
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="hamster">Hamster</option>
+                    <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <input type="submit">
+
+
+            </div>
+        </form>
+    </div>
+
+    <footer><a href="S.C.html">Back</a></footer>
+</body>
+</html>

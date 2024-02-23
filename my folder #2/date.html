@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Methods</title>
+</head>
+<body>
+    <h1>Getting Miliseconds</h1>
+    <p id="D1"></p>
+
+    <h1>Getting Seconds</h1>
+    <p id="D2"></p>
+
+    <h1>Getting Minutes</h1>
+    <p id="D3"></p>
+
+    <h1>Getting Hours</h1>
+    <p id="D4"></p>
+
+    <h1>Getting Months</h1>
+    <p id="D5"></p>
+
+    <h1>Getting Years</h1>
+    <p id="D6"></p>
+
+    <script>
+        const milli = new Date();
+        document.getElementById("D1").innerHTML = milli.getMilliseconds();
+
+        const sec = new Date();
+        document.getElementById("D2").innerHTML = sec.getSeconds();
+
+        const min = new Date();
+        document.getElementById("D3").innerHTML = sec.getMinutes();
+
+        const hour = new Date();
+        document.getElementById("D4").innerHTML = hour.getHours();
+
+        const month = new Date();
+        document.getElementById("D5").innerHTML = month.getMonth() + 1;
+
+        const Year = new Date();
+        document.getElementById("D6").innerHTML = Year.getFullYear();
+    </script>
+</body>
+</html>

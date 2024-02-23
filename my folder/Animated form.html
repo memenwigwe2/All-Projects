@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated form</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+            font-family: consolas;
+
+        }
+        .container{
+            position: relative;
+            width: 450px;
+            min-height: 300px;
+            background-color: rgb(255,255 ,255 ,0.05);
+            box-shadow: 0 15px 15px rgb(0,0 ,0,1);
+        }
+        .container:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: 0 15px 15px rgb(255,255 ,255,0.1);
+            pointer-events: none;
+
+        }
+        .form{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            box-sizing: border-box;
+         z-index: 1;
+        }
+        .form h2{
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-size:24px ;
+        }
+        .form .inputBox{
+            width:100%;
+            margin-top: 20px;
+        }
+
+        .form .inputBox input{
+            width:100%;
+background: transparent;
+border: none;
+border-bottom: 2px solid white;
+outline:none;
+font-size: 18px;
+color: white;
+padding: 5px 0;
+font-family: consolas;
+        }
+        ::placeholder{
+            color: #eee;
+        }
+        .form .inputBox input[type='submit']{
+            background: white;
+            color: #000;
+            border: none;
+            font-weight: 900;
+            max-width: 100px;
+            cursor: pointer;
+        }
+
+        .form p{
+            color: #eee;
+
+        }
+        .form p a{
+            color: white;
+        }
+        .container::after{
+            content: '';
+            position:  absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #ff0047,#6eff00,green,yellow,lime,violet,pink,red);
+            pointer-events: none;
+            animation: animate 1s linear infinite;
+        }
+
+        @keyframes animate{
+            0%{
+                filter: blur(60px) hue-rotate(0deg);
+            }
+            100%{
+                filter: blur(60px) hue-rotate(360deg);
+            }
+        }
+        .inputBox input[type='submit']:hover{
+            background-color: rgb(190, 187, 187);
+            transition: .9s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h2>Login Form</h2>
+            <form>
+                <div class="inputBox">
+                    <input type="text" name="" placeholder="Username">
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="" placeholder="Password">
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Login">
+                </div>
+                <p>forgot password ? <a href="#">Click Here</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

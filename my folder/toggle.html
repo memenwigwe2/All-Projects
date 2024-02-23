@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Brightness</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+        background: #111;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .checkbox {
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        -webkit-appearance: none;
+        width: 80px;
+        height: 40px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+        outline: none;
+        transition: 1s;
+      }
+      .checkbox:checked {
+        background: #3434db;
+        transition: 1s;
+      }
+      .checkbox::before {
+        content: "";
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background: #fff;
+        border-radius: 20px;
+        top: 4px;
+        left: 4px;
+        transition: linear 0.2s;
+      }
+      .checkbox:checked:before {
+        left: 44px;
+      }
+      .page-content {
+        width: 800px;
+        background: #fff;
+        padding: 50px;
+        display: flex;
+        transition: .5s;
+      }
+      .page-content img {
+        height: 400px;
+        margin-right: 30px;
+      }
+      .page-content h3{
+          margin-top: 0;
+          font-size: 24px;
+          text-transform: uppercase;
+      }
+      .page-content p{
+          font-size: 18px;
+          text-align: justify;
+      }
+      .checkbox:checked + .page-content{
+          filter: brightness(20%) ;
+          transform: scale(80%);
+          transition: .5s;
+      }
+      .page-content:hover{
+        filter: brightness(200%) ;
+          transform: scale(80%);
+          transition: .5s;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" class="checkbox" />
+    <div class="page-content">
+      <img src="images/meme poiky.JPG" alt="" />
+      <div class="text">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reprehenderit voluptatem consectetur quisquam minus ullam eveniet dignissimos! Debitis rem a quaerat harum, minus nesciunt earum molestias voluptate dolores accusamus cum laborum vel fuga quasi, dolorem itaque rerum pariatur suscipit! Numquam alias repudiandae, consequatur facilis id dolore! Fugiat odit illo voluptatibus accusamus a corrupti minus soluta deleniti sit, voluptas eum obcaecati minima adipisci reiciendis quae nisi ea, explicabo inventore, autem veniam ratione quibusdam? Sint quasi enim soluta quis? Iure eveniet esse quo? Id placeat alias fugit repellendus itaque, maiores tempora labore eligendi hic qui minus sint quisquam error debitis. Fugiat, ullam.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

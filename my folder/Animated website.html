@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Page Design - Easy Tutorials</title>
+    <style>
+
+        *{
+margin:0;
+padding: 0;
+font-family: sans-serif;
+        }
+        .hero{
+            width: 100%;
+            height: 100vh;
+            background: url(https://thumbs.dreamstime.com/b/sandy-sea-bottom-underwater-background-135531019.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+overflow: hidden;
+        }
+        .logo{
+            width: 100px;
+            cursor: pointer;
+        }
+        .navbar{
+            width: 85%;
+            height: 15%;
+            margin: auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+        }
+        button{
+            color: #fbfcfd;
+            padding: 10px 25px;
+            background: transparent;
+            border: 1 solid #fff;
+            border-radius: 20px;
+            outline: none;
+            cursor: pointer;
+        }
+        .content{
+            color: #fbfcfd;
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        h1{
+            font-size: 80px;
+            margin: 10px 0 30px;
+            line-height: 80px;
+        }
+        .side-bar{
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(#00545d, #000729);
+            position:absolute ;
+            right: -600px;
+            top: 0;
+        }
+        .menu{
+            display: block;
+            width:25px;
+            margin: 40px auto 10 ;
+            cursor: pointer;
+        }
+        .social-links img, .useful-links img{
+            width: 25px;
+            margin: 5px auto;
+            cursor: pointer;
+        }
+        .social-links{
+            width: 50px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .useful-links{
+            width: 50px;
+            text-align: center;
+            position: absolute;
+            bottom: 30px;
+           
+        }
+        .bubbles img{
+width: 50px;
+animation: bubble 7s linear infinite;
+        }
+        .fish img{
+width: 50px;
+animation: fish 7s linear infinite;
+        }
+        @keyframes bubble {
+            0%{
+                transform: translate(0);
+                opacity: 0;
+            }
+            50%{
+                
+                opacity: 1;
+            }
+            70%{
+                
+                opacity: 1;
+            }
+            100%{
+                transform: translateY(-80vh);
+                opacity: 0;
+            }
+        }
+        @keyframes fish {
+            0%{
+                transform: translate(0);
+                opacity: 1;
+            }
+            50%{
+                transform: translate(80vh);
+                opacity: 1;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .bubbles{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            bottom: -70px;
+        }
+
+        .fish{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 70px;
+        }
+
+
+        .bubbles img:nth-child(1){
+            width: 25px;
+            animation-delay: 2s;
+        }
+        .bubbles img:nth-child(2){
+            animation-delay: 1s;
+        }
+        .bubbles img:nth-child(3){
+            width: 25px;
+            animation-delay: 3s;
+        }
+        .bubbles img:nth-child(4){
+            animation-delay: 4s;
+        }
+        .bubbles img:nth-child(5){
+            animation-delay: 3s;
+        }
+        .bubbles img:nth-child(6){
+            width: 20px;
+            animation-delay: 6s;
+        }
+        .bubbles img:nth-child(7){
+            width: 35px;
+            animation-delay: 7s;
+        }
+
+
+        .fish img:nth-child(1){
+            width: 45px;
+            animation-delay: 2s;
+        }
+        .fish img:nth-child(2){
+            width: 45px;
+            animation-delay: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+<div class="navbar">
+<img src="feend/sterling 2.png" class="logo">
+<button type="button">Sign Up</button>
+</div>
+<div class="content">
+<small>Welcome to Our</small>
+<H1>World's <br> Creative Studio</H1>
+<button type="button">Take a Tour </button>
+</div>
+<div class="side-bar">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEX///8AAADPz8+WlpZLS0v7+/vu7u5vb29TU1PDw8Pz8/N8fHyCgoITExMzMzOsrKyPj4+6urrU1NTo6Oizs7NCQkJkZGQoKCilpaUtLS05OTmenp7IyMiFhYVaWlpqamoLCwt+baPtAAACfUlEQVR4nO3di27CMAyF4TBWoAxYx2UX2Abv/5RbpSE2aXLSJpJl5/+ewEdQSlLXCQEAAAAAAAAAAAAAAAAA/Fu2H5/3dnyu2uWgfLv5xJ75Ljlf02kXO1LXpAWcHbQrHe0wSwm4XGvXmWGdcDU2G+0qs2ziX9SVdo2ZVrGAW+0Ks20jCZ+1C8z2LAecaddXgPx7+qhdXgGPYsKzdnkFnMWEL9rlFfAiJrxol1eCmFC7uCLEhJb/sV2txYT32uUVcBATWl03/daJCd+1yyvgXUzo4Mf0IgcMr9oFZnuNJGzetCvM9BZdIFq/EiNXof3v6SkeMISpdpUZpikBQ3jSrnO0p7SA3+tgixvCk8k8aS/xx2561K53oGOXvuV9Dbm9s2M7OB4AAAAAAAAAALBj2Z6mdpwGvm4Rmv1C+1nSYIt94rsIvdZmN/umTQ34oF3qaA9pAe19QW8WKQFtPuG+mscDWu/0lru8g4dm/Vi7gvVXZqIvzTTa9RUg3xbtNgvdyG1Ddm+FN/JN0Vqf0H82YkL7LcKxJmHt6oqo/DO0uaj46ygm9P9b6v9+6P8/jf//pRWsLfyvDytY41ewT2P5ppi411bBfmkFe949588tAAAAAAAAAACAJc7nRO06aw/Yhs36mtkcen1Onte21y51tMSZe+7nJp60q8ySMPvS/fzSxvrc+egMWtvzWXuxOcLa9RXg+yrsyVei/5nsdg+zupHn6vs/G0G7uiIqT2j9ft+Tz5mxuWz6Sz4ryHqXd0/u9Lbfqh9t1nd/7loFZ+eZf2kmev5hBWdY+j+HtIKzZCs4Dzj4P9O5Z+1c7g9euAAAAAAAAAAAAAAAAABQhS+ZyFZoP93BCgAAAABJRU5ErkJggg==" class="menu"> <br>
+
+<div class="social-links">
+<img src="https://www.logolynx.com/images/logolynx/c4/c41d7944a8f28bf5e94388ffa2c8a6d0.jpeg" ><br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXegCihhPXnXiG6y6hcCDRvp13StVPzbEecZRG3RlyIGIzx9fOk8a8L9BmY534UHOhf20&usqp=CAU" > <br>
+<img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" > 
+</div>
+<div class="useful-links">
+<img src="https://img.favpng.com/24/3/19/computer-icons-clip-art-vector-graphics-share-icon-image-png-favpng-W9PX4UyhHJygL902VfFDzkMZm.jpg" > <br>
+<img src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png" >
+</div>
+</div>
+
+<div class="bubbles">
+<img src="feend/png-transparent-soap-bubble-blue-water-bubble-blue-bubble-drop-speech-balloon-color-thumbnail-removebg-preview.png" >
+<img src="feend/png-transparent-soap-bubble-blue-water-bubble-blue-bubble-drop-speech-balloon-color-thumbnail-removebg-preview.png" >
+<img src="feend/png-transparent-soap-bubble-blue-water-bubble-blue-bubble-drop-speech-balloon-color-thumbnail-removebg-preview.png" >
+<img src="feend/png-transparent-soap-bubble-blue-water-bubble-blue-bubble-drop-speech-balloon-color-thumbnail-removebg-preview.png" >
+<img src="feend/png-transparent-soap-bubble-blue-water-bubble-blue-bubble-drop-speech-balloon-color-thumbnail-removebg-preview.png" >
+<img src="feend/png-transparent-soap-bubble-blue-water-bubble-blue-bubble-drop-speech-balloon-color-thumbnail-removebg-preview.png" >
+<img src="feend/png-transparent-soap-bubble-blue-water-bubble-blue-bubble-drop-speech-balloon-color-thumbnail-removebg-preview.png" >
+</div>
+<div class="fish">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEat7SuLImoJkrXuCnuWQ5HzxDIx70eyHIIxLe-guem16fgED97w3_WNBXN7DbSXLpLDM&usqp=CAU" >
+    <img src="https://thumbs.dreamstime.com/b/clipart-fish-pale-blue-colored-body-dark-blue-colored-sickle-shaped-fins-scales-smiling-swimming-vector-160158718.jpg" >
+    </div>
+    </div>
+</body>
+</html>

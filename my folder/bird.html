@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bird Loading Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow: hidden;
+      }
+      .wrapper {
+        width: 100vw;
+        height: 100vh;
+        background: #18233e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bird {
+        position: relative;
+        width: 250px;
+        height: 250px;
+      }
+      .hair-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        animation: rotateHair 3s infinite ease-in-out;
+      }
+      @keyframes rotateHair{
+          0%{
+transform: rotate(0deg);
+          }
+          15%{
+              transform:rotate(0deg) ;
+          }
+          35%{
+              transform: rotate(-360deg);
+          }
+          65%{
+              transform: rotate(-360deg);
+          }
+          85%{
+              transform: rotate(0deg);
+          }
+          100%{
+              transform: rotate(0deg);
+          }
+      }
+      .hair {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        background: #a12a15;
+        border-radius: 0 125px 125px 0;
+      }
+      .face {
+        position: absolute;
+        width: 70%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+      .white-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        animation: rotateWhite 3s infinite ease-in-out;
+      }
+      @keyframes rotateWhite{
+          0%{
+              transform: rotate(0deg); 
+          }
+          15%{
+              transform: rotate(0deg);
+          }
+          35%{
+              transform: rotate(-360deg);
+          }
+          65%{
+              transform: rotate(-360deg);
+          }
+          85%{
+              transform: rotate(0deg);
+          }
+          100%{
+              transform: rotate(0deg);
+          }
+      }
+      .white {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 50%;
+        border-radius: 0 87.5px 87.5px 0;
+        background: white;
+      }
+      .shadow-container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        animation: rotateShadow 3s infinite ease-in-out;
+      }
+      @keyframes rotateShadow{
+          0%{
+              transform: rotate(0deg); 
+          }
+          15%{
+              transform: rotate(0deg);
+          }
+          35%{
+              transform: rotate(-360deg);
+          }
+          65%{
+              transform: rotate(-360deg);
+          }
+          85%{
+              transform: rotate(0deg);
+          }
+          100%{
+              transform: rotate(0deg);
+          }
+      }
+      .shadow{
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        border-radius: 0 0 87.5px 0;
+        background: rgb(0,0,0,0.15);
+      }
+      .bigBeak-container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        animation: rotateBigBeak 3s infinite ease-in-out;
+      }
+      @keyframes rotateBigBeak{
+          0%{
+              transform: rotate(0deg); 
+          }
+          15%{
+              transform: rotate(0deg);
+          }
+          35%{
+              transform: rotate(-360deg);
+          }
+          65%{
+              transform: rotate(-360deg);
+          }
+          85%{
+              transform: rotate(0deg);
+          }
+          100%{
+              transform: rotate(0deg);
+          }
+      }
+      .bigBeak{
+          position: absolute;
+          width: 50%;
+          height: 50%;
+          top: 0;
+          left: 0;
+          background: #f7ce42;
+          border-radius: 87.5px 0 0 0;
+      }
+      .smallBeak-container{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 60px;
+        left: 30%;
+        z-index: 0;
+        animation: rotSmallBeak 3s infinite ease-in-out;
+      }
+      @keyframes rotSmallBeak{
+          15%{
+              transform: rotate(0deg);
+          }
+          35%{
+              transform: rotate(-360deg);
+          }
+          65%{
+              transform: rotate(-360deg);
+          }
+          85%{
+              transform: rotate(0deg);
+          }
+      }
+      .smallBeak{
+          width: 25%;
+          height: 25%;
+          top: 50%;
+          left: 25%;
+          background: #f7a500;
+          border-radius: 0 0 0 43.25px;
+      }
+      .eye{
+          position: absolute;
+          width: 25%;
+          height: 25%;
+          bottom: 51%;
+          left: 51%;
+          background: #18233e;
+          z-index: 2;
+          border-radius: 50%;
+          animation: rotateEye 3s infinite ease-in-out;
+      }
+      @keyframes rotateEye{
+          0%{
+              transform: rotate(0deg); 
+          }
+          15%{
+              transform: rotate(0deg);
+          }
+          35%{
+              transform: rotate(-180deg);
+          }
+          65%{
+              transform: rotate(-180deg);
+          }
+          85%{
+              transform: rotate(-360deg);
+          }
+          100%{
+              transform: rotate(-360deg);
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="bird">
+        <div class="hair-container">
+          <div class="hair"></div>
+        </div>
+        <div class="face">
+          <div class="white-container">
+            <div class="white"></div>
+          </div>
+          <div class="shadow-container">
+            <div class="shadow"></div>
+          </div>
+          <div class="bigBeak-container">
+            <div class="bigBeak"></div>
+          </div>
+          <div class="smallBeak-container">
+            <div class="smallBeak"></div>
+          </div>
+          <div class="eye"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" onkeypress="jump()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        #game{
+            width: 500px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        #charachter{
+            width: 30px;
+            height: 50px;
+            background: url(https://www.omgchrome.com/wp-content/uploads/2015/06/chrome-trex-dinosaur.jpg);
+            background-position: center;
+            background-size: 80px;
+            position: relative;
+            top: 150px;
+            right: -20px;
+        }
+
+        .animate{
+            animation: jump 500ms infinite;
+        }
+
+        #block{
+            width: 20px;
+            height: 20px;
+            background: blue;
+            top: 130px;
+            left:480px;
+            position: relative;
+            animation:  block 2s infinite;
+        }
+
+        @keyframes jump{
+            0%{top: 150px;}
+            30%{top: -1px;}
+            50%{top: -1px;}
+            100%{top: 150px;}
+        }
+
+        @keyframes block{
+            0%{
+                left: 480px;
+            }
+
+            100%{
+                left: -40px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="game">
+        <div id="charachter"></div>
+        <div id="block"></div>
+    </div>
+</body>
+<script src="dino.js"></script>
+</html>

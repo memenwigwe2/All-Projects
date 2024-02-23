@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chinemerem's Effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: sans-serif;
+        background: #eee;
+    }
+    .container{
+        position: relative;
+        min-height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+    .card{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 350px;
+        max-width: 250px;
+        padding: 2.2rem 2.3rem;
+        border-radius: 30px;
+        box-shadow: -12px -12px 12px 0 rgb(255, 255, 255, 0.4),
+        12px 12px 12px 0 rgb(0,0,0, 0.05)
+        ;
+    }
+    .icon{
+        width: 130px;
+        height: 130px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        box-shadow: -9px -9px 9px 0 rgb(255,255,255,0.4),
+        9px 9px 9px rgb(0,0,0,0.05)
+        ;
+        background: linear-gradient(120deg, rgb(228,288,288), #fbfbfb);
+    }
+    img{
+        width: 60%;
+    }
+    h1{
+        color: #00cec9;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-family: monospace;
+        font-weight: 400;
+        margin: .7rem;
+    }
+    p{
+        color: #555;
+        font-size: 1.2rem;
+        font-family: 'Quicksand', sans-serif;
+        line-height: 1.4rem;
+    }
+    .btn{
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-family: 'Quicksand', sans-serif;
+        margin-top: 1.5rem;
+        color: #00cec9;
+        width: 180px;
+        height: 50px;
+        align-self: flex-start;
+        letter-spacing: .5px;
+        border-radius: 25px;
+        box-shadow: -9px -9px 9px 0 rgb(255,255,255,0.4),
+        9px 9px 9px 0 rgb(0,0,0,0.05);
+    }
+    .btn:hover{
+        box-shadow: inset -9px -9px 9px 0 rgb(255,255,255,0.4),
+         inset 9px 9px 9px 0 rgb(0,0,0,0.05);
+    }
+    .circle,.sqaure{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+    }
+    .sqaure{
+        
+        border-radius: 10px;
+        box-shadow: -9px 0px 9px 0 rgb(255, 255, 255, 0.4),
+        9px 0px 9px 0 rgb(0, 0, 0, 0.05);
+        transform: rotate(45deg);
+    }
+    .circle{
+        right: 5%;
+        top: 5%;
+        border-radius: 500%;
+        box-shadow: -9px 0px 9px 0 rgb(255, 255, 255, 0.4),
+        9px 0px 9px 0 rgb(0, 0, 0, 0.05);
+    }
+    .sqaure::after, .circle::after{
+        content: '';
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .circle::after{
+        border-radius: 50%;
+        box-shadow: inset -9px -9px 9px 0 rgb(255, 255, 255, 0.4),
+        9px 9px 9px 0 rgb(0, 0, 0, 0.05);
+    }
+    .sqaure::after{
+         border-radius: 10px;
+         box-shadow: inset -9px -9px 9px 0 rgb(255, 255, 255, 0.4),
+        9px 9px 9px 0 rgb(0, 0, 0, 0.05);
+    }
+    .sqaure.one{
+        top: -5%;
+        left: -5%;
+    }
+    .circle.one{
+        top: -5%;
+        right: -5%;
+    }
+    .sqaure.two{
+        bottom:5%;
+        right: -5%;
+    }
+    .circle.two{
+        top: 55%;
+        left: -5%;
+    }
+  
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="icon">
+          <img src="feend/data.png"/>
+        </div>
+        <h1>Coding</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae ad voluptatem veritatis cupiditate nulla delectus illo quisquam?</p>
+        <button class="btn">Read More</button>
+      </div>
+      <div class=" sqaure one"></div>
+      <div class=" sqaure two"></div>
+      <div class=" circle one"></div>
+      <div class=" circle two"></div>
+    </div>
+  </body>
+</html>

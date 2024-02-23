@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #FCA4A6;
+        }
+        
+        .title{
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        p{
+            color: #FCA4A6;
+            padding: 20px;
+        }
+        .coffee-container{
+            background: white;
+            border-radius: 5px;
+            width: 50rem;
+            margin-left: 12rem;
+        }
+
+        .home_button{
+    display: inline-block;
+    background-color: #C1576A;
+    color: white;
+    padding: 1.125rem 2rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+.home_button:hover{
+    background-color: #A83E51;
+}
+
+.coffee-form{
+    padding: 20px;
+}
+
+.name-container{
+    padding: 10px;
+}
+
+.age-container{
+    padding: 10px;
+    margin-left: 30rem;
+    margin-top: -4.5rem;
+}
+
+.email-container{
+    padding: 20px;
+}
+
+.question2{
+    padding: 10px;
+    margin-left: 30rem;
+    margin-top: -6rem;
+}
+
+.question4{
+    padding: 10px;
+    margin-left: 30rem;
+    margin-top: -6rem;
+}
+
+.question3{
+    padding: 20px;
+    margin-bottom: -3rem;
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="title">Order Your Coffee</h1>
+
+    <div class="coffee-container">
+        <form class="coffee-form">
+            <div class="name-container">
+                What is your name? <br> <br>
+                First name <input type="text"> <br> <br> Last name <input type="text">
+            </div>
+
+            <div class="age-container">
+                How old are you? <br> <br>
+                Age <input type="text">
+            </div><br>
+            
+            <div class="email-container">
+                 Please enter you email address.
+                <input type="email">
+            </div>
+           
+            <hr> <br>
+
+            <div class="question1">
+                Have you ever tried coffee before? <br><br>
+                Yes <input type="checkbox"> <br><br>
+                No <input type="checkbox">
+            </div>
+
+            <div class="question2">
+                Which of the the options do you want in your coffee? <br><br>
+                Sugar <input type="checkbox"><br><br>
+                Honey <input type="checkbox"><br><br>
+                Milk <input type="checkbox"><br><br>
+                Nothing <input type="checkbox"><br><br>
+            </div> <br><br><hr>
+
+            <div class="question3">
+                How many cups of coffee would you like?<br><br>
+                <input type="text">
+            </div>
+
+            <div class="question4">
+                Would you like your cup to come with a straw?<br><br>
+                Yes <input type="checkbox"> <br><br>
+                No <input type="checkbox">
+            </div>
+
+            <div class="question__final">
+                <p> You will get a message on your email to notify you when your coffee is delivered.
+                    <br><br>
+                    Are you sure you want this coffee to be delivered?<br><br>
+                    Yes <input type="checkbox"><br><br>
+                    No <input type="checkbox">
+                </p>
+            </div>
+           
+        </form>
+    </div> <br> <br>
+
+    <a class="home_button" href="index.html">Order</a>
+    
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ham Menu</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    line-height: 1.5;
+    background-image: radial-gradient(circle at 29% 55%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 4%,transparent 4%, transparent 44%,transparent 44%, transparent 100%),radial-gradient(circle at 85% 89%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 52%,transparent 52%, transparent 100%),radial-gradient(circle at 6% 90%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 53%,transparent 53%, transparent 64%,transparent 64%, transparent 100%),radial-gradient(circle at 35% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 6%,transparent 6%, transparent 98%,transparent 98%, transparent 100%),radial-gradient(circle at 56% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 16%,transparent 16%, transparent 23%,transparent 23%, transparent 100%),radial-gradient(circle at 42% 0%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 3%,transparent 3%, transparent 26%,transparent 26%, transparent 100%),radial-gradient(circle at 29% 28%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 75%,transparent 75%, transparent 100%),radial-gradient(circle at 77% 21%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 35%,transparent 35%, transparent 55%,transparent 55%, transparent 100%),radial-gradient(circle at 65% 91%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 46%,transparent 46%, transparent 76%,transparent 76%, transparent 100%),linear-gradient(45deg, rgb(83, 91, 235),rgb(76, 11, 174));
+}
+.logo{
+    font-size:40px ;
+    padding: 40px;
+    color: #fff;
+}
+.logo span{
+    color: #d882fa;
+}
+.navigation_btn{
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    box-shadow: 0 10px 30px rgb(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.nag_bg{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: radial-gradient(#5e0094,#003494);
+    position: fixed;
+    top: 45px;
+right: 45px;
+transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.navigation_icon{
+    position: relative;
+margin-top: 35px;
+
+}
+.navigation_icon, .navigation_icon::before,
+.navigation_icon::after{
+width: 40px;
+height:3px ;
+background: #ad88f1;
+display: inline-block;
+}
+navigation_icon::before,
+.navigation_icon::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+}
+navigation_icon::before{
+    top: -10px;
+}
+.navigation_icon::after{
+    top: 10px;
+}
+.navigation_checkbox{
+    display: none;
+}
+.navigation_btn:hover .navigation_icon::before{
+top: -12px;
+}
+.navigation_btn:hover .navigation_icon::before{
+top: 12px;
+}
+.nav_list{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+.nav_link{
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.nav_link:hover{
+    color:#a275f7;
+    transform: translate(10px);
+}
+.nav{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    z-index: 1500;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.256, 1.55);
+}
+.navigation_checkbox:checked ~ .nav{
+opacity: 1;
+visibility: visible;
+width: 100%;
+}
+.navigation_checkbox:checked ~ .nav_bg{
+    transform: scale(90);
+}
+.navigation_checkbox:checked + .navigation_btn .navigation_icon{
+    background: transparent;
+}
+.navigation_checkbox:checked + .navigation_btn .navigation_icon::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+.navigation_checkbox:checked + .navigation_btn .navigation_icon::after{
+    top: 0;
+    transform: rotate(-135deg);
+}
+    </style>
+</head>
+<body>
+    <div class="navigation">
+<h1 class="logo">Light <span>Code</span></h1>
+
+<input type="checkbox" class="navigation_checkbox" id="toggle">
+<label for="toggle" class="navigation_btn">
+    <span class="navigation_icon">&nbsp; </span>
+</label>
+
+<div class="nav_bg">&nbsp;</div>
+
+<div class="nav">
+<ul class="nav-list">
+<li><a href="#" class="nav_link">Home</a></li>
+<li><a href="#" class="nav_link">About Us</a></li>
+<li><a href="#" class="nav_link">Service</a></li>
+<li><a href="#" class="nav_link">Blog</a></li>
+<li><a href="#" class="nav_link">Contact Us</a></li>
+</ul>
+</div>
+    </div>
+</body>
+</html>

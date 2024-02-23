@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralax Website Demo</title>
+    <style>
+        body,html{
+            height: 100%;
+            margin: 0;
+            font-size: 16px;
+            font-family: 'Lato',sans-serif;
+            font-weight: 400;
+            line-height: 1.8em;
+            color: #666;
+        }
+        .pimg1,.pimg2,.pimg3{
+            position: relative;
+            opacity: 0.70;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            background-attachment: fixed;
+        }
+        .pimg1{
+background-image: url('https://image.shutterstock.com/image-photo/picture-beautiful-view-birds-260nw-1836263689.jpg' );
+min-height: 100%;
+        }
+        .pimg2{
+background-image: url('https://images.pexels.com/photos/1921336/pexels-photo-1921336.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="photo-5" class="gallery_photo gallery_photo--5');
+min-height: 400%;
+        }
+        .pimg3{
+background-image: url('https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+min-height: 400%;
+        }
+        .section{
+            text-align: center;
+            padding: 50px 80px;
+
+        }
+        .section-light{
+            background: #f4f4f4;
+            color: #666;
+
+        }
+        .section-dark{
+            background: #282e34;
+            color: #666;
+            
+        }
+        .ptext{
+position: absolute;
+top: 50%;
+width: 100%;
+text-align: center;
+color: #000;
+font-size: 27px;
+letter-spacing: 8px;
+        }
+        .ptext .border{
+            background: #111;
+            color: #fff;
+            padding: 20px;
+        }
+        .ptext .border .trans{
+            background: transparent;
+
+        }
+        @media(max-widht:568px) {
+            .pimg1,.pimg2,.pimg3{
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pimg1">
+<div class="ptext">
+<span class="border">
+Paralax Website
+</span>
+</div>
+    </div>
+
+    <section class="section section-light">
+<h2>Section One</h2>
+<p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam odio cumque ad sunt laboriosam quisquam quos? Voluptatum quidem accusamus magnam accusantium excepturi nisi velit deserunt quaerat. Voluptates ducimus quos, eligendi aliquid adipisci veritatis soluta placeat sapiente nobis porro facere libero explicabo tempora laboriosam ipsam voluptas earum ratione! Quaerat laborum dolore facilis? Nobis autem temporibus expedita laudantium error, neque, officia eaque repellat reiciendis at consequatur similique quae doloribus cumque illo! Ab soluta non culpa. Molestiae atque iusto eaque adipisci sint cumque quia nostrum voluptatem animi beatae! Tempora, earum. Laboriosam, eligendi? Omnis unde voluptate reiciendis, cupiditate dolore pariatur aspernatur sunt tempore iste.
+</p>
+    </section>
+    <div class="pimg2">
+        <div class="ptext">
+        <span class="border trans">
+        Image Two Text
+        </span>
+        </div>
+            </div>
+            <section class="section section-dark">
+                <h2>Section Two</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam odio cumque ad sunt laboriosam quisquam quos? Voluptatum quidem accusamus magnam accusantium excepturi nisi velit deserunt quaerat. Voluptates ducimus quos, eligendi aliquid adipisci veritatis soluta placeat sapiente nobis porro facere libero explicabo tempora laboriosam ipsam voluptas earum ratione! Quaerat laborum dolore facilis? Nobis autem temporibus expedita laudantium error, neque, officia eaque repellat reiciendis at consequatur similique quae doloribus cumque illo! Ab soluta non culpa.
+                </p>
+                    </section>
+                    <div class="pimg3">
+                        <div class="ptext">
+                        <span class="border trans">
+                        Image Three Text
+                        </span>
+                        </div>
+                            </div>
+                            <section class="section section-dark">
+                                <h2>Section Three</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam odio cumque ad sunt laboriosam quisquam quos? Voluptatum quidem accusamus magnam accusantium excepturi nisi velit deserunt quaerat. Voluptates ducimus quos, eligendi aliquid adipisci veritatis soluta placeat sapiente nobis porro facere libero explicabo tempora laboriosam ipsam voluptas earum ratione! Quaerat laborum dolore facilis? Nobis autem temporibus expedita laudantium error, neque, officia eaque repellat reiciendis at consequatur similique quae doloribus cumque illo! Ab soluta non culpa.
+                                </p>
+                                    </section>
+                                    <div class="pimg1">
+                                        <div class="ptext">
+                                        <span class="border">
+                                        Traversy Media
+                                        </span>
+                                        </div>
+                                            </div>
+</body>
+</html>

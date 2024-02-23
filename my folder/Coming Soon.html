@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon Page</title>
+    <style>
+        body,html{
+margin: 0;
+padding:0 ;
+width: 100%;
+height: 100%;
+        }
+        body{
+            background: url(https://images.unsplash.com/photo-1540324155974-7523202daa3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFuY2V8ZW58MHx8MHx8&w=1000&q=80) 50% 50%;
+            background-size: cover;
+            font-family: sans-serif;
+        }
+        .container{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .container h1{
+            text-transform: uppercase;
+            font-size: 60px;
+            margin: 0;
+letter-spacing: 10px;
+        }
+        .container h2{
+            margin: 0;
+            font-size: 20px;
+            font-weight: 500;
+font-style: italic;
+        }
+        .count{
+            margin: 40px 0;
+        }
+        .countd{
+display: inline-block;
+width: 80px;
+height: 80px;
+border: 2px solid;
+margin: 0 30px;
+font-size: 12px;
+border-radius: 50%;
+overflow: hidden;
+        }
+        .countd span{
+            display: block;
+            font-size: 26px;
+            margin-top: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chinemerem</h1>
+        <h2>My Birthday is coming soon.</h2>
+
+<div class="count">
+    <div class="countd">
+        <span id="days">00</span>
+        Days
+    </div>
+
+    <div class="countd">
+        <span id="hours">00</span>
+        Hours
+    </div>
+
+    <div class="countd">
+        <span id="minutes">00</span>
+        Minutes
+    </div>
+
+    <div class="countd">
+        <span id="seconds">00</span>
+        Seconds
+    </div>
+</div>
+
+    </div>
+
+
+
+
+
+<script type="text/javascript">
+
+var count= new Date("sept 4,2100 00:00:00").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+var d = count - now;
+
+var days = Math.floor(d/(1000*60*60*60*24));
+var hours = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+var minutes = Math.floor((d%(1000*60*60))/(1000*60));
+var seconds = Math.floor((d%(1000*60))/1000);
+
+
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+},1000);
+
+
+</script>
+
+
+
+</body>
+</html>

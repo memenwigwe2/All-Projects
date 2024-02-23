@@ -1,0 +1,306 @@
+body{
+    background-image: linear-gradient(rgb(0,0,0,0.9), rgb(0,0,0,0.6)), url("images/christin-hume-Hcfwew744z4-unsplash.jpg");
+    background-size: 1360px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    font-size: 100%;
+  }
+  
+  
+  p.html-content{
+    font-family:'Odibee Sans', cursive;
+    border-style: inset;
+    border-width: thick;
+    padding: 5px;
+    font-size: 1.25em;
+    border-color: lawngreen red yellow rgb(0, 255, 255);
+    background-color: black;
+    text-align: justify;
+    text-indent: 50px;
+    letter-spacing: 2px;
+  }
+  
+  p.CSS-details{
+    font-family: 'Odibee Sans', cursive;
+    border-style: inset;
+    border-width: thick;
+    padding: 5px;
+    border-color: lawngreen red yellow cyan;
+    font-size: 1.25em;
+    background-color: black;
+    text-align: justify;
+    text-indent: 50px;
+    letter-spacing: 2px;
+    word-wrap:unset;
+  }
+  
+  *{
+    color: rgb(5, 255, 242);
+  }
+  
+  .menu-bar {
+    background: rgb(0, 255, 200);
+    text-align: center;
+  }
+  
+  .menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+  }
+  
+  .menu-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+  }
+  
+  .menu-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .active,.menu-bar ul li:hover {
+    background: #3ada97;
+    border-radius: 3px;
+  }
+  
+  .sub-menu-1{
+      display: none;
+  }
+  
+  .menu-bar ul li:hover .sub-menu-1{
+      display: block;
+      position: absolute;
+      background: rgb(3, 179, 120);
+      margin-top: 15px;
+      margin-left: -15px;
+  }
+  
+  .menu-bar ul li:hover .sub-menu-1 ul{
+      display: block;
+      margin:10px;
+  }
+  
+  .menu-bar ul li:hover .sub-menu-1 ul li{
+      width: 150px;
+      padding: 10px;
+      border-bottom: 1px dotted #ffff;
+      background:transparent;
+      border-radius: 0;
+      text-align:left;
+  }
+  
+  .menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+      border-bottom: none;
+  }
+  
+  .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+      color: #b2ff00;
+  }
+  
+  .sub-menu-2{
+      display: none;
+  }
+  
+  .hover-me:hover .sub-menu-2{
+  position: absolute;
+  display: block;
+  margin-top: -40px;
+  margin-left: 140px;
+  background: rgb(0, 100, 0);
+  }
+  .div{
+    background: green;
+  }
+  
+  em {
+      color: red;
+      font-style: normal;
+    }
+    img {
+      width: 100px;
+      border-radius: 200px;
+      float: left;
+      margin-right: 10px;
+    }
+  
+    #top li {
+      display: inline;
+    }
+  
+    #top {
+      padding: 10px 0px 10px 0px;
+    }
+  
+    #top a {
+      text-decoration: none;
+      padding: 4px;
+      color: aliceblue;
+      background-color: rgb(255, 8, 8);
+      border-radius: 5px 5px 5px 5px;
+      display: inline-block;
+      margin: 0px 0px 0px 5px;
+    }
+  
+    #top a:hover {
+      background-color: rgb(248, 211, 0);
+    }
+  
+    #top a:active {
+      background-color: rgb(11, 7, 250);
+    }
+  
+    .username {
+      font-weight: bold;
+    }
+  
+    ul {
+      list-style-type: circle;
+    }
+  
+    header {
+      background-color: rgb(3, 206, 172);
+      margin-top: -26px;
+      font-size: 2vw;
+    }
+  
+    .html-section {
+      background-color: rgb(0, 17, 255);
+      padding: 5px;
+      width: 8%;
+    }
+  
+    .Section-CSS{
+      background-color: rgb(0, 17, 255);
+      padding: 5px;
+      width: 5%;
+    }
+  
+    /*THIS DESIGN IS FOR THE INDEX PAGE*/
+    h1 {
+      font-family: 'Tangerine', serif ;
+      text-align: center;
+      text-shadow:2px 2px 5px rgb(243, 13, 13);
+      letter-spacing: 7px;
+      word-spacing: 6px;
+      font-size: 60px;
+    }
+  
+    .html-content {
+      border: greenyellow;
+      width: 1000px;
+      font-size: 5vw;
+    }
+  
+    table {
+      width: 25%;
+    }
+  
+    iframe {
+      height: 300px;
+      width: 1000px;
+      border: 4px inset red;
+      border-radius: 20px;
+      padding: 10px;
+    }
+  
+    input:focus{
+      background-color: rgb(0, 162, 190);
+      transition: 5s;
+    }
+  
+    .power{
+      text-align: center;
+    }
+  
+    input[type=text]  {
+      width: 20%;
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 8px, 0;
+      }
+  
+      fieldset{
+        border:5px solid cyan ;
+        animation: change 1s linear infinite;
+      }
+      @keyframes change{
+  0%{
+    border:5px solid blue ;
+  }
+  50%{
+    border:5px dotted cyan ;
+  }
+  100%{
+    border:5px solid blue ;
+  }
+      }
+      button{
+        height: 50px;
+  width: 200px;
+  background: none;
+  transition: .5s;
+      }
+      input[type='submit']{
+        height: 50px;
+        width: 200px;
+        background: none;
+        transition: .5s;
+        -webkit-appearance: none;
+        outline: none;
+      }
+      input[type='submit']:hover{
+        transition: .5s;
+        background: rgb(249, 248, 250);
+        cursor: pointer;
+      }
+      .n:hover{
+        transition: .5s;
+        background: rgb(64, 64, 65);
+        cursor: pointer;
+        transform: translateY(-110%) scale(110%);
+      }
+
+      #burn{
+        transition: .5s;
+        animation: big 5s linear infinite;
+      }
+      @keyframes big{
+0%{
+  font-size: 0;
+}
+50%{
+  font-size: 3rem;
+}
+75%{
+  font-size: 4rem;
+}
+100%{
+  font-size: 0;
+}
+      }
+
+    .nope{
+      transition: .5s;
+      background: rgb(64, 64, 65);
+      cursor: pointer;
+    }
+
+    #beep{
+      resize: none;
+    }
+
+    .chad{
+      transition: .5s;
+      background: rgb(64, 64, 65);
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+    }
+
+    a .material-icons{
+      text-decoration: none;
+      color: aqua;
+    }

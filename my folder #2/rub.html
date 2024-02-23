@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubber Animation</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.text{
+    text-transform: uppercase;
+}
+.btn{
+    width: 200px;
+    height: 60px;
+    margin: 40px 0;
+    background: coral;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+.box{
+    width:240px ;
+    height: 200px;
+    background: cadetblue;
+    margin: 0 auto;
+    
+}
+.box:hover, .btn:hover, h1:hover{
+    animation: ruber 1s ;
+}
+@keyframes ruber{
+    0%{
+        transform: scale3d(1,1,1);
+    }
+    35%{
+        transform: scale3d(1.25,.75,1);
+    }
+    45%{
+        transform: scale3d(.75,1,1);
+    }
+    60%{
+        transform: scale3d(1.2,.8,1);
+    }
+    75%{
+        transform: scale3d(1.05,.95,1);
+    }
+    100%{
+        transform: scale3d(1,1,1);
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text">Rubber Band Animation</h1>
+        <Button class="btn">Hover me</Button>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "CHALLENGES"
+	},
+	{
+		"path": "../../image"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "CHALLENGES"
+  }
+}

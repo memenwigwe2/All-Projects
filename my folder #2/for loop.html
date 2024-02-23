@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <div id="output_div"></div>
+    <script>
+        var outputHTML = "";
+        var animals = ["cat", "dog", "goat", "turkey", "buffalo"];
+        var colour = ["brown", "black", "white"];
+        var adjective = ["wild", "hairy", "domesticated", "crazy"];
+
+        outputHTML += "<table>";
+        for (var i = 0; i < animals.length; i++) {
+            for (var j = 0; j < colour.length; j++){
+                outputHTML += "<tr>";
+                for (var k = 0; k = adjective.length; k++){
+                    outputHTML += "<td>" + adjective[k] + " " + colour[j] + " " + animals[i] + "</td>";
+                }
+                outputHTML += "</tr>";
+            }
+        }
+        outputHTML += "</table>";
+
+        document.getElementById("output_div").innerHTML = outputHTML;
+    </script>
+</body>
+</html>
+<!--This code does not work!-->

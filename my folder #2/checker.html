@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strenth Checker</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: serif;
+        box-sizing: border-box;
+      }
+
+      .container {
+        height: 100vh;
+        width: 100%;
+        background: #201f21;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .input-box {
+        width: 400px;
+        min-width: 90%;
+        position: relative;
+      }
+      .input-box input {
+        width: 80%;
+        height: 60px;
+        padding: 0 20px;
+        border: 1px solid #ccc;
+        outline: none;
+        color: #fff;
+        background: transparent;
+        transform: translateX(8rem);
+      }
+      button{
+        background: transparent;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transform: translate(4rem,-27px);
+      }
+      button img{
+          border-radius: 50%;
+          width: 60px;
+      }
+      #message{
+          bottom: -30px;
+          color: #fff;
+          font-size: 15px;
+          margin-top:6rem ;
+          transform: translateX(-60rem) translateY(1rem);
+          display: none;
+         
+      }
+      ::placeholder{
+          font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-box">
+        <input type="password" id="password" placeholder="Password" />
+        <button type="submit"><img src="https://p.kindpng.com/picc/s/82-823183_arrow-computer-icons-clip-art-right-arrow-white.png"><button>
+      </div> <br> <br> <br>
+      <p id="message">Password is <span id="strengnt"></span></p>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        var pass = document.getElementById("password")
+        var msg = document.getElementById("message")
+        var str = document.getElementById("strengnt")
+
+        pass.addEventListener('input', () => {
+            if(pass.value.length > 0){
+                msg.style.display = "block";
+            }
+            else{
+                msg.style.display = "none";
+            }
+
+
+
+            if(pass.value.length < 4){
+                str.innerHTML = "Weak"
+pass.style.borderColor = "red"
+msg.style.color = "red"
+            }
+            else if(pass.value.length >= 4 && pass.value.length < 8){
+                str.innerHTML = "Medium"
+                pass.style.borderColor = "orange"
+msg.style.color = "orange"
+            }
+            else if(pass.value.length >= 8){
+                str.innerHTML = "Strong"
+                pass.style.borderColor = "lime"
+msg.style.color = "lime"
+            }
+
+
+
+            if(pass.value.length > 15){
+                str.innerHTML = "TooBig"
+                pass.style.borderColor = "red"
+msg.style.color = "red"
+            }
+             if(pass.value.length > 20){
+                str.innerHTML = "OverDue"
+                pass.style.borderColor = "red"
+msg.style.color = "red"
+            }
+            if(pass.value.length > 30){
+                str.innerHTML = "Why won't you listen me!!!"
+                pass.style.borderColor = "red"
+msg.style.color = "red"
+            }
+            if(pass.value.length > 40){
+                str.innerHTML = "Please don't"
+                pass.style.borderColor = "red"
+msg.style.color = "red"
+            }
+            if(pass.value.length > 50){
+                str.innerHTML = "ERROR!!! ERROR!!!"
+                pass.style.borderColor = "red"
+msg.style.color = "red"
+            }
+        })
+        
+
+    </script>
+  </body>
+</html>

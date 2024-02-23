@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling</title>
+    <style>
+ html{
+     height: 100%;
+     background: rgb(37, 33, 93);
+ }
+
+ body{
+     margin: 0 auto;
+     font-family:sans-serif ;
+ }
+
+ #navbar{
+    width: 100%;
+    background: black;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+ }
+
+ #navbar a:first-child{
+     margin-left: 50px;
+     border-left: 1px solid white;
+ }
+
+ #navbar a{
+     font-size: 25px;
+     text-decoration: none;
+     color: white;
+    line-height: 100px;
+    border-right: 1px solid white;
+    padding: 20px;
+ }
+
+ #navbar a:hover{
+     color:rgb(241, 124, 55);
+ }
+
+ #progress-container{
+     height: 8px;
+     width: 100%;
+     background: white;
+ }
+
+ #progress-bar{
+     height: 8px;
+     width: 0%;
+     background: rgb(241, 124, 55);
+ }
+
+ #main{
+     width: 80%;
+     margin: 50px auto;
+     background: rgb(85, 86, 154);
+     padding: 50px;
+     z-index: -1;
+ }
+
+ h1 {
+     color: white;
+     font-size: 77px;
+     text-align: center;
+ }
+
+ p{
+     color: white;
+     font-size: 27px;
+ }
+    </style>
+</head>
+<body>
+<script src="main.js"></script>
+
+        <div id="navbar">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+        </div>
+        <div id="main">
+            <h1>Header</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quia consequatur at quaerat possimus nesciunt similique deserunt. Mollitia quasi quisquam reprehenderit eum vero totam animi error nisi perspiciatis placeat molestias ea ipsum consectetur, laborum dicta explicabo, amet maiores deserunt. Perspiciatis nostrum nam consectetur accusamus iure tempore amet quia est? Possimus in, nobis labore aut doloremque repellendus ipsam necessitatibus incidunt iure adipisci magni, est eum ratione quisquam rem dignissimos. Consequatur saepe corrupti inventore, modi praesentium deleniti animi ipsam, repellat asperiores voluptate error eligendi nihil aliquam officiis tempora sunt harum dolor illum, sint quisquam voluptatibus. Nihil cupiditate, ratione amet voluptas omnis soluta provident hic quas sit dignissimos nam quidem minima incidunt rerum obcaecati ipsam dicta quod ea sapiente? Mollitia ipsum, suscipit neque ad itaque tempora aut, iure similique natus quia iste rem nam pariatur minus vitae harum, recusandae perferendis a totam. Eaque facilis magnam consequatur magni quasi minima pariatur obcaecati soluta assumenda minus unde, commodi accusamus recusandae id eos hic quis officia tempore ipsum reiciendis dolor cupiditate deserunt molestiae? Est velit vero consequatur illo, quis ullam tempore numquam quam possimus saepe distinctio alias quidem, a, perspiciatis molestias id sequi tempora dicta dolore quia. Reiciendis facilis quae, ea cumque corrupti commodi maiores nulla?</p>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quia consequatur at quaerat possimus nesciunt similique deserunt. Mollitia quasi quisquam reprehenderit eum vero totam animi error nisi perspiciatis placeat molestias ea ipsum consectetur, laborum dicta explicabo, amet maiores deserunt. Perspiciatis nostrum nam consectetur accusamus iure tempore amet quia est? Possimus in, nobis labore aut doloremque repellendus ipsam necessitatibus incidunt iure adipisci magni, est eum ratione quisquam rem dignissimos. Consequatur saepe corrupti inventore, modi praesentium deleniti animi ipsam, repellat asperiores voluptate error eligendi nihil aliquam officiis tempora sunt harum dolor illum, sint quisquam voluptatibus. Nihil cupiditate, ratione amet voluptas omnis soluta provident hic quas sit dignissimos nam quidem minima incidunt rerum obcaecati ipsam dicta quod ea sapiente? Mollitia ipsum, suscipit neque ad itaque tempora aut, iure similique natus quia iste rem nam pariatur minus vitae harum, recusandae perferendis a totam. Eaque facilis magnam consequatur magni quasi minima pariatur obcaecati soluta assumenda minus unde, commodi accusamus recusandae id eos hic quis officia tempore ipsum reiciendis dolor cupiditate deserunt molestiae? Est velit vero consequatur illo, quis ullam tempore numquam quam possimus saepe distinctio alias quidem, a, perspiciatis molestias id sequi tempora dicta dolore quia. Reiciendis facilis quae, ea cumque corrupti commodi maiores nulla?</p>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quia consequatur at quaerat possimus nesciunt similique deserunt. Mollitia quasi quisquam reprehenderit eum vero totam animi error nisi perspiciatis placeat molestias ea ipsum consectetur, laborum dicta explicabo, amet maiores deserunt. Perspiciatis nostrum nam consectetur accusamus iure tempore amet quia est? Possimus in, nobis labore aut doloremque repellendus ipsam necessitatibus incidunt iure adipisci magni, est eum ratione quisquam rem dignissimos. Consequatur saepe corrupti inventore, modi praesentium deleniti animi ipsam, repellat asperiores voluptate error eligendi nihil aliquam officiis tempora sunt harum dolor illum, sint quisquam voluptatibus. Nihil cupiditate, ratione amet voluptas omnis soluta provident hic quas sit dignissimos nam quidem minima incidunt rerum obcaecati ipsam dicta quod ea sapiente? Mollitia ipsum, suscipit neque ad itaque tempora aut, iure similique natus quia iste rem nam pariatur minus vitae harum, recusandae perferendis a totam. Eaque facilis magnam consequatur magni quasi minima pariatur obcaecati soluta assumenda minus unde, commodi accusamus recusandae id eos hic quis officia tempore ipsum reiciendis dolor cupiditate deserunt molestiae? Est velit vero consequatur illo, quis ullam tempore numquam quam possimus saepe distinctio alias quidem, a, perspiciatis molestias id sequi tempora dicta dolore quia. Reiciendis facilis quae, ea cumque corrupti commodi maiores nulla?</p>
+        </div>
+
+       
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <script src="script.js" defer></script>
+    <style>
+      *, *::after, *::before {
+        box-sizing:border-box;
+      }
+
+      body{
+        margin: 0;
+      }
+
+      :root {
+        --cell-size:100px;
+        --mark-size: calc(var(--cell-size) * .9);
+      }
+
+      .board{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(3, auto);
+      }
+
+      .cell{
+        width:var(--cell-size);
+        height: var(--cell-size);
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .cell:first-child,
+      .cell:nth-child(2),
+      .cell:nth-child(3) {
+        border-top: none;
+      }
+
+      .cell:nth-child(3n + 1) {
+        border-left: none;
+      }
+
+      .cell:nth-child(3n + 3) {
+        border-right: none;
+      }
+
+      .cell:last-child,
+      .cell:nth-child(8),
+      .cell:nth-child(7) {
+        border-bottom: none;
+      }
+
+      .cell.x,
+      .cell.circle {
+        cursor:not-allowed;
+      }
+
+      .cell.x::before,
+      .cell.x::after,
+      .cell.circle::after {
+        background: black;
+      }
+
+      .cell.circle::before{
+        background: black;
+      }
+
+      .cell.circle::before, 
+      .cell.circle::after,
+      .board.circle .cell:not(.x):not(.cicle):hover::before,
+      .board.circle .cell:not(.x):not(.cicle):hover::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .cell.circle::before,
+      .board.circle .cell:not(.x):not(.cicle):hover::before {
+        width: var(--mark-size);
+        height: var(--mark-size);
+      }
+
+      .cell.circle::after,
+      .board.circle .cell:not(.x):not(.cicle):hover::after {
+        width: calc(var(--mark-size) * .7);
+        height: calc(var(--mark-size) * .7);
+        background: white;
+      }
+
+    
+
+      .cell.x::before, 
+      .board.x .cell:not(.x):not(.circle):hover::before  {
+        transform: rotate(45deg);
+      }
+
+      .cell.x::after, 
+      .board.x .cell:not(.x):not(.circle):hover::after {
+        transform: rotate(-45deg);
+      }
+
+      .board.x .cell:not(.x):not(.circle):hover::before,
+      .board.x .cell:not(.x):not(.circle):hover::after,
+      .board.circle .cell:not(.x):not(.circle):hover::before {
+        background: lightgray;
+      }
+
+      .cell.x::before, .cell.x::after,
+       .board.x .cell:not(.x):not(.circle):hover::before, 
+       .board.x .cell:not(.x):not(.circle):hover::after{
+        content: '';
+        position: absolute;
+        width: calc(var(--mark-size) * .15);
+        height: var(--mark-size);
+      }
+
+      .winning-message{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, .9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 5rem;
+        flex-direction: column;
+      }
+
+      .winning-message button{
+        font-size: 3rem;
+        background: white;
+        border: 1px solid black;
+        padding: .25em .5em;
+        cursor: pointer;
+        transition: .5s;
+      }
+
+      .winning-message button:hover{
+        background: black;
+        border-color: white;
+        color: white;
+      }
+
+      .winning-message.show{
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+
+    <div class="winning-message " id="winningMessage">
+      <div data-winning-message-text></div>
+      <button id="restartButton">Restart</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop-Down Menu design - Easy Tutorials</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-image: url(data:image/jpeg;base64,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);
+        background-size: cover;
+        background-position: center;
+        font-family: sans-serif;
+      }
+
+      .menu-bar {
+        background: rgb(31, 150, 31);
+        text-align: center;
+      }
+
+      .menu-bar ul {
+        display: inline-flex;
+        list-style: none;
+        color: #fff;
+      }
+
+      .menu-bar ul li {
+        width: 120px;
+        margin: 15px;
+        padding: 15px;
+      }
+
+      .menu-bar ul li a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .active,.menu-bar ul li:hover {
+        background: #2bab2b;
+        border-radius: 3px;
+      }
+
+      .sub-menu-1{
+          display: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-1{
+          display: block;
+          position: absolute;
+          background: rgb(0, 100, 0);
+          margin-top: 15px;
+          margin-left: -15px;
+      }
+
+      .menu-bar ul li:hover .sub-menu-1 ul{
+          display: block;
+          margin:10px;
+      }
+
+      .menu-bar ul li:hover .sub-menu-1 ul li{
+          width: 150px;
+          padding: 10px;
+          border-bottom: 1px dotted #fff;
+          background:transparent;
+          border-radius: 0;
+          text-align:left ;
+      }
+
+      .menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+          border-bottom: none;
+      }
+
+      .menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+          color: #b2ff00;
+      }
+
+      .sub-menu-2{
+          display: none;
+      }
+
+      .hover-me:hover .sub-menu-2{
+position: absolute;
+display: block;
+margin-top: -40px;
+margin-left: 140px;
+background: rgb(0, 100, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu-bar">
+      <ul>
+        <li class="active">
+          <a href="dropdown2.html" target="_blank"> <i class="material-icons">home</i> Home</a></li>
+        <li><a href="#">About Us</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#">Mision</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Team</a></li>
+                </ul>
+              </div></li>
+        <li><a href="#">Services</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#">Web Desingning</a></li>
+                  <li class="hover-me"><a href="#">Marketing &nbsp;&nbsp;&nbsp; ></a>
+                <div class='sub-menu-2'>
+                    <ul>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Email Marketing</a></li>
+                      </ul>
+                </div>
+                </li>
+                  <li class="hover-me"><a href="#">Mobile App &nbsp;&nbsp;&nbsp;></a>
+                    <div class='sub-menu-2'>
+                        <ul>
+                            <li><a href="#">Android App</a></li>
+                            <li><a href="#">IOS App</a></li>
+                            <li><a href="#">Ionic App</a></li>
+                            <li><a href="#">Flutter App</a></li>
+                            <li><a href="#">Unity App</a></li>
+                          </ul>
+                    </div>
+                </li>
+                </ul>
+              </div></li>
+        <li><a href="#">Clients</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#">Mision</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Team</a></li>
+                </ul>
+              </div></li>
+        <li><a href="#">Investers</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#">Mision</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Team</a></li>
+                </ul>
+              </div></li>
+        <li><a href="#">Pricing</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#">Mision</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Team</a></li>
+                </ul>
+              </div></li>
+        <li><a href="#">Training</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#">Mision</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Team</a></li>
+                </ul>
+              </div></li>
+        <li><a href="#">Contact Us</a>
+            <div class="sub-menu-1">
+                <ul>
+                  <li><a href="#">Mision</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Team</a></li>
+                </ul>
+              </div></li>
+      </ul>
+    </div>
+  </body>
+</html>

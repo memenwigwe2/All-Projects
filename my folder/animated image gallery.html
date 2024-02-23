@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            padding-top: 80px;
+            background: #131313;
+        }
+        h1{
+            color: rgb(30, 183, 243);
+            text-transform: uppercase;
+            text-align: center;
+            padding-bottom: 65px;
+            letter-spacing: 15px;
+        }
+        .galery{
+            width: 1000px;
+            margin:0 auto;
+
+            position: relative;
+        }
+        .gallery_photo{
+            height: 250px;
+            width: 250px;
+            border-radius: 200px;
+            box-shadow: 0 20px 40px rgb(0,0 ,0,0.4 );
+
+            z-index: 10;
+            position: absolute;
+            outline-offset:20px ;
+            transition: all 1s;
+        }
+        .gallery_photo--1{
+            top: 0;
+            left: 0;
+            margin-top: 240px;
+        }
+        .gallery_photo--2{
+top: 0;
+right: 0;
+margin-top: 240px;
+z-index: 1;
+        }
+        .gallery_photo--3{
+top: 40px;
+left: 20%;
+margin-top: 160px;
+}
+.gallery_photo--4{
+top: 60px;
+left: 40%;
+margin-top: 120px;
+}
+.gallery_photo--5{
+top: 40px;
+left: 60%;
+margin-top: 160px;
+z-index: 2;
+}
+.gallery_photo:hover{
+    outline: 15px solid rgb(24, 197, 240);
+    transform:scale(1.05)translateY(-20px) rotateY(2850deg);
+    z-index: 20;
+}
+.gallery:hover .gallery_photo:not(:hover){
+    transform: scale(0.9);
+}
+    </style>
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <div class="gallery">
+<img src="https://image.shutterstock.com/image-photo/picture-beautiful-view-birds-260nw-1836263689.jpg" alt="photo-1" class="gallery_photo gallery_photo--1">
+
+<img src="https://wallpaperaccess.com/full/5576099.jpg" alt="photo-2" class="gallery_photo gallery_photo--2">
+
+<img src="https://image.shutterstock.com/image-photo/lovely-beach-picture-beautiful-260nw-1554809048.jpg" alt="photo-3" class="gallery_photo gallery_photo--3">
+
+<img src="https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="photo-4" class="gallery_photo gallery_photo--4">
+
+<img src="https://images.pexels.com/photos/1921336/pexels-photo-1921336.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="photo-5" class="gallery_photo gallery_photo--5">
+    </div>
+</body>
+</html>

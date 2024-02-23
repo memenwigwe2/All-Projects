@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side to Side Animation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f1f1f1;
+      }
+      .container {
+        perspective: 320px;
+      }
+      .btn {
+        display: block;
+        margin: 40px 0;
+        width: 240px;
+        height: 80px;
+        border: none;
+        background: #e15f41;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 6px;
+        outline: none;
+        cursor: pointer;
+        transition: .3s;
+      }
+      .btn1:hover{
+          transform: rotateX(15deg);
+          box-shadow: 0 15px 15px #e15f4190;
+      }
+      .btn2:hover{
+          transform: rotateX(-15deg);
+          box-shadow: 0 -15px 15px #e15f4190;
+      }
+      .btn3:hover{
+          transform: rotateY(15deg);
+          box-shadow: -15px 0 15px #e15f4190;
+      }
+      .btn4:hover{
+          transform: rotateY(-15deg);
+          box-shadow: 15px 0 15px #e15f4190;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn btn1">Hover Me</button> 
+      <button class="btn btn2">Hover Me</button>
+      <button class="btn btn3">Hover Me</button>
+      <button class="btn btn4">Hover Me</button>
+    </div>
+  </body>
+</html>

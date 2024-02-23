@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation/loading..</title>
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e74c3c;
+}
+.parent{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent div{
+    width: 0;
+    height: 0;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 5px rgb(0,0,0,0.1);
+}
+.first{
+    animation: 1s grow ease-out alternate infinite;
+}
+.second{
+    animation: 1s grow ease-out alternate infinite;
+    animation-delay: 0.25s;
+}
+.third{
+    animation: 1s grow ease-out alternate infinite;
+    animation-delay: 0.425s;
+}
+@keyframes grow{
+0%{
+    width: 0;
+    height: 0;
+}
+100%{
+width: 200px;
+height: 200px;
+}
+}
+    </style>
+</head>
+<body>
+    <div class="parent">
+<div class="first"></div>
+    </div>
+    <div class="parent">
+        <div class="second"></div>
+            </div>
+            <div class="parent">
+                <div class="third"></div>
+                    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* Basic styling for visual appeal */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007bff;
+}
+
+/* Styling for different sections */
+.input-section, .platform-selection, .formatted-text {
+    margin-bottom: 20px;
+}
+
+
+/* Styling for buttons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom:20px;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for textareas */
+textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize:none;
+}
+
+/* Styling for select dropdown */
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Styling for formatted text */
+.formatted-text {
+    text-align: left;
+}
+
+/* Styling for copy and clear buttons */
+#copy-button, #clear-button {
+    background-color: #28a745;
+    margin-left: 10px;
+}
+
+#copy-button:hover, #clear-button:hover {
+    background-color: #218838;
+}
+
+/* Add more styling as needed */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cusor Animation - DarkCode</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: url(feend/mountain3.jpg);
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: sans-serif;
+        color: #fff;
+        cursor: pointer;
+      }
+      .content p {
+        width: 700px;
+        line-height: 26px;
+        font-size: 16px;
+        text-align: justify;
+      }
+
+      .cusor {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #c6c6c6;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: .1s;
+      }
+      .cusor2 {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #c6c6c6;
+        border-radius: 50%;
+        left: 8;
+        top: 8;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Cusor Follow on MouseMove</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est odit
+        tempore perspiciatis porro ad. Delectus quam nemo necessitatibus nostrum
+        officia ex earum vero laborum, praesentium saepe provident veritatis
+        nulla debitis velit excepturi fuga molestiae accusantium, laudantium eum
+        quidem quibusdam placeat magnam, unde eveniet! Quas architecto dolor
+        magnam. Voluptatem vero obcaecati provident quis voluptatibus doloribus
+        perferendis, ipsa officiis velit, consequuntur dolor eos rerum
+        asperiores quidem placeat molestiae iusto sunt impedit ab assumenda
+        quae? Sequi ex minima doloribus. Ut distinctio quidem in reiciendis
+        porro magnam, tenetur laborum eos animi necessitatibus obcaecati ab
+        aspernatur ipsa odio vel eveniet natus earum eaque molestiae expedita
+        tempore, nemo facilis. Veniam delectus cum, fuga autem reprehenderit
+        nobis est a impedit corrupti distinctio odit vero maxime quod itaque
+        repudiandae deleniti, esse aperiam deserunt recusandae mollitia.
+      </p>
+    </div>
+
+    <div class="cusor"></div>
+    <div class="cusor2"></div>
+
+    <script>
+      var cusor = document.querySelector(".cusor");
+      var cusor2 = document.querySelector(".cusor2");
+      document.addEventListener("mousemove", function(e){cusor.style.cssText = cusor2.style.cssText = "left: " + e.clientX + "px; top:" + e.clientY + "px; ";});
+    </script>
+  </body>
+</html>

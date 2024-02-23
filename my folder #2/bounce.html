@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+        .box{
+width: 250px;
+height: 150px;
+background: yellowgreen;
+margin: 80px auto;
+        }
+        .text:hover, .box:hover{
+            animation: bounce 1s linear;
+        }
+        @keyframes bounce{
+            20%, 50%, 80%, to{
+                transform: translateY(0);
+            }
+            40%{
+                transform: translateY(-30px);
+            }
+            70%{
+                transform: translateY(-15px);
+            }
+            90%{
+                transform: translateY(-4px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text">Bounce Animation</h1>
+    <div class="box"></div>
+    </div>
+</body>
+</html>

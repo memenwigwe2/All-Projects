@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Simple Website</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      .wrapper {
+        background: url(https://s3.envato.com/files/218351594/1.jpg) no-repeat;
+        background-size: cover;
+        height: 100vh;
+      }
+      .navbar {
+        height: 80px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+      }
+      .navbar ul {
+        float: right;
+        margin-right: 20px;
+      }
+      .navbar ul li {
+        list-style-type: none;
+        margin: 0 8px;
+        display: inline-block;
+        line-height: 80px;
+      }
+      .navbar ul li a{
+          text-decoration: none;
+          color: white;
+          font-size: 8px;
+          font-family: sans-serif;
+          padding: 6px 13px;
+          transition: .4s;
+      }
+      .navbar ul li a.active,
+      .navbar ul li a:hover{
+          background: red;
+          border-radius: 2px;
+      }
+      .wrapper .center{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: sans-serif;
+user-select: none;
+      }
+      .center h1{
+          color: white;
+          font-size: 70px;
+          font-weight: bold;
+          width: 900px;
+          text-align: center;
+
+      }
+      .center h2{
+          color: white;
+          font-size: 70px;
+          font-weight: bold;
+          width: 885px;
+          margin-top: 10px;
+          text-align: center;
+      }
+      .logo{
+          width: 200px;
+      }
+      .center.buttons{
+          margin: 35px 280px;
+      }
+      .buttons button{
+          height: 50px;
+          width: 150px;
+          font-size: 18px;
+          font-weight: bold;
+          color: #ffb3b3;
+          background: red;
+          border: 1px solid #cc0000;
+          outline: none;
+          cursor: pointer;
+          border-radius: 25px;
+          transition: .5s;
+      }
+.buttons .btn{
+    margin-left: 25px;
+}
+.buttons button:hover{
+    background: #cc0000;
+}
+button{
+  margin-left: 250px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar">
+        <img src="feend/sterling 2.png" class="logo" />
+        <ul>
+          <li><a href="" class="active">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Feedback</a></li>
+        </ul>
+      </nav>
+      <div class="center">
+          <h1>Welcome to Cascade</h1>
+<h2>Create Somthing New</h2>
+<div class="buttons">
+    <button>Explore More</button>
+    <button class="btn">Subscribe To Us</button>
+</div>
+      </div>
+    </div>
+  </body>
+</html>
